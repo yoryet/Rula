@@ -1,0 +1,150 @@
+from tkinter import *
+import tkinter as tk
+#import tkinter
+from tkinter import ttk
+
+ventana = tk.Tk()
+ventana.title("RULA")
+#ventana = Frame(height=300,width=450)
+ventana.geometry("200x300")
+ventana.wm_attributes("-topmost", True) # Esta es la línea importante.
+ventana.iconbitmap("cilindro.ico") #Cambiar el icono
+#ventana.pack(padx=5,pady=5)
+
+
+#w = Canvas(ventana,width=200,height=100,background = "white")
+#w.place(width=100,x=00,y=185)
+
+entry = tk.Entry(ventana, justify=tk.RIGHT)
+
+def sumar(event):
+   resultado= int(numero1.get())*35+int(numero2.get())*17+int(numero3.get())*8+int(numero4.get())*11+int(numero5.get())*5
+   Label(text=resultado,font=("Arial",14),fg="Black",bg="White").place(width=60,x=0,y=180)
+   resultado= resultado-int(numero6.get())
+   resultado2= resultado*int(numero10)
+   Label(text=resultado2,font=("Arial",14),fg="Blue", bg="White").place(width=60,x=0,y=210)
+   resultado3= resultado*int(numero251)
+   Label(text=resultado3,font=("Arial",14),fg="green", bg="White").place(width=60,x=0,y=240)
+   resultado4= resultado*int(numero50)
+   Label(text=resultado4,font=("Arial",14),fg="Black", bg="White").place(width=60,x=0,y=270)
+
+   
+   resultado10= int(numero11.get())*35+int(numero12.get())*17+int(numero13.get())*8+int(numero14.get())*11+int(numero15.get())*5
+   Label(text=resultado10,font=("Arial",14),fg="Black",bg="light grey").place(width=60,x=65,y=180)
+   resultado10= resultado10-int(numero16.get())
+   resultado11= resultado10*int(numero10)
+   Label(text=resultado11,font=("Arial",14),fg="Blue",bg="light grey").place(width=60,x=65,y=210)
+   resultado12= resultado10*int(numero251)
+   Label(text=resultado12,font=("Arial",14),fg="green",bg="light grey").place(width=60,x=65,y=240)
+   resultado13= resultado10*int(numero50)
+   Label(text=resultado13,font=("Arial",14),fg="Black",bg="light grey").place(width=60,x=65,y=270)
+
+
+   resultado20= int(numero21.get())*35+int(numero22.get())*17+int(numero23.get())*8+int(numero24.get())*11+int(numero25.get())*5
+   Label(text=resultado20,font=("Arial",14),fg="Black", bg="grey").place(width=60,x=135,y=180)
+   resultado20= resultado20-int(numero26.get())
+   resultado21= resultado20*int(numero10)
+   Label(text=resultado21,font=("Arial",14),fg="Blue", bg="grey").place(width=60,x=135,y=210)
+   resultado22= resultado20*int(numero251)
+   Label(text=resultado22,font=("Arial",14),fg="green", bg="grey").place(width=60,x=135,y=240), 
+   resultado23= resultado20*int(numero50)
+   Label(text=resultado23,font=("Arial",14),fg="Black", bg="grey").place(width=60,x=135,y=270)
+
+def limpiarCampos():
+    numero1.set("0")
+    numero2.set("0")
+    numero3.set("0")
+    numero4.set("0")
+    numero5.set("0")
+    numero6.set("0")
+
+    numero11.set("0")
+    numero12.set("0")
+    numero13.set("0")
+    numero14.set("0")
+    numero15.set("0")
+    numero16.set("0")
+
+    numero21.set("0")
+    numero22.set("0")
+    numero23.set("0")
+    numero24.set("0")
+    numero25.set("0")
+    numero26.set("0")
+
+
+resultado=0
+resultado=10
+resultado=20
+
+numero1 = IntVar()
+numero2 = IntVar()
+numero3 = IntVar()
+numero4 = IntVar()
+numero5 = IntVar()
+numero6 = IntVar()
+
+numero10 = 10
+numero251 = 25
+numero50 = 50
+
+numero11 = IntVar()
+numero12 = IntVar()
+numero13 = IntVar()
+numero14 = IntVar()
+numero15 = IntVar()
+numero16 = IntVar()
+
+numero21 = IntVar()
+numero22 = IntVar()
+numero23 = IntVar()
+numero24 = IntVar()
+numero25 = IntVar()
+numero26 = IntVar()
+
+
+
+
+titulo = Label(text="PLE",font=("Impact",8)).place(x=5,y=30)
+titulo = Label(text="MED",font=("Impact",8)).place(x=5,y=50)
+titulo = Label(text="CUA",font=("Impact",8)).place(x=5,y=70)
+titulo = Label(text="CAL",font=("Impact",8)).place(x=5,y=90)
+titulo = Label(text="LIN",font=("Impact",8)).place(x=5,y=110)
+titulo = Label(text="COL", fg="Red", font=("Impact",8)).place(x=5,y=130)
+nu1 = Entry(textvariable=numero1, justify=tk.RIGHT).place(width=30,x=30,y=30)
+nu2 = Entry(textvariable=numero2, justify=tk.RIGHT).place(width=30,x=30,y=50)
+nu3 = Entry(textvariable=numero3, justify=tk.RIGHT).place(width=30,x=30,y=70)
+nu4 = Entry(textvariable=numero4, justify=tk.RIGHT).place(width=30,x=30,y=90)
+nu5 = Entry(textvariable=numero5, justify=tk.RIGHT).place(width=30,x=30,y=110)
+nu6 = Entry(textvariable=numero6, justify=tk.RIGHT).place(width=30,x=30,y=130)
+
+nu11 = Entry(textvariable=numero11, justify=tk.RIGHT).place(width=30,x=80,y=30)
+nu12 = Entry(textvariable=numero12, justify=tk.RIGHT).place(width=30,x=80,y=50)
+nu13 = Entry(textvariable=numero13, justify=tk.RIGHT).place(width=30,x=80,y=70)
+nu14 = Entry(textvariable=numero14, justify=tk.RIGHT).place(width=30,x=80,y=90)
+nu15 = Entry(textvariable=numero15, justify=tk.RIGHT).place(width=30,x=80,y=110)
+nu16 = Entry(textvariable=numero16, justify=tk.RIGHT).place(width=30,x=80,y=130)
+
+nu21 =Entry(textvariable=numero21, justify=tk.RIGHT).place(width=30,x=130,y=30)
+nu21 =Entry(textvariable=numero21, justify=tk.RIGHT).place(width=30,x=130,y=30)
+nu22 =Entry(textvariable=numero22, justify=tk.RIGHT).place(width=30,x=130,y=50)
+nu23 =Entry(textvariable=numero23, justify=tk.RIGHT).place(width=30,x=130,y=70)
+nu24 =Entry(textvariable=numero24, justify=tk.RIGHT).place(width=30,x=130,y=90)
+nu25 =Entry(textvariable=numero25, justify=tk.RIGHT).place(width=30,x=130,y=110)
+nu26 =Entry(textvariable=numero26, justify=tk.RIGHT).place(width=30,x=130,y=130)
+
+
+
+
+
+bsumar = Button(text=" TOTAL: Precione Tecla Intro ",command=sumar)
+bsumar.pack() #.place(width=150, x=5,y=130)
+ventana.bind("<Return>", sumar) # en la funcion SUMA debe estar (EVENT) siempre
+ventana.bind("<KP_Enter>", sumar)
+
+bBorrar = Button(text="LIMPIAR",command= limpiarCampos).place(width=150, x=25,y=150)
+#ventana.bind("<KP_Enter>", limpiarCampos)
+
+
+
+ventana.mainloop()
