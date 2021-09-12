@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
 
+#Defino las funciones que luego voy a usar
 def limpiarCampos():
     allFields = [nu1, 
                 nu2, 
@@ -144,7 +145,7 @@ def validaYSuma(event):
         tk.Label(text=res6*25,font=f,fg="green").grid(row=9, column=3)
         tk.Label(text=res6*50,font=f,fg="Black").grid(row=10, column=3)
     
-
+# Interfaz
 ventana = tk.Tk()
 ventana.title("RULA")
 ventana.geometry("317x230")
