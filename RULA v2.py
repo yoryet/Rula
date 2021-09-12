@@ -121,7 +121,7 @@ def validaYSuma(event):
         
 
 # Suma
-        f = ("Arial",14)
+        f = ("Arial",13, "bold")
 
         res = (numero1*35) + (numero2*17) +( numero3*8) + (numero4*11) + (numero5*5)
         res2= res-numero6
@@ -147,12 +147,12 @@ def validaYSuma(event):
 
 ventana = tk.Tk()
 ventana.title("RULA")
-ventana.geometry("282x300")
+ventana.geometry("317x230")
 ventana.wm_attributes("-topmost", True) # Mantiene la ventana encima de las demas
 
 f = ("Impact",8)
 r = tk.CENTER
-w = 7
+w = 9
 
 tituloPLE = tk.Label(text="PLE",font=f).grid(row=1,column=0)
 tituloMED = tk.Label(text="MED",font=f).grid(row=2,column=0)
